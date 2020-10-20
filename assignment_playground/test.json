@@ -1,10 +1,19 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "data": {
-        "url": ""
+        "url": "https://github.com/Averiandith/FIT3179/blob/main/assignment_playground/2019.csv"
+    },
+
+    "mark": "point",
+    "encoding": {
+        "x": {
+            "field": "Country or region",
+            "type": "nominal"
+        },
+        "y": {
+            "field": "Overall rank",
+            "type": "quantitative"
+        }
     }
-
-
-
 
 }
