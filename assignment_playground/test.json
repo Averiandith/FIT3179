@@ -7,11 +7,7 @@
     "mark": "point",
     "encoding": {
         "x": {
-            "field": "Country or region",
-            "type": "nominal"
-        },
-        "y": {
-            "field": "Overall rank",
+            "field": "Overall_Rank",
             "type": "quantitative"
         }
     }
