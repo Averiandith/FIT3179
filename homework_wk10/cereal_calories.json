@@ -1,0 +1,19 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/cereal.csv"
+    },
+
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "calories",
+            "type": "quantitative"
+        },
+        "y": {
+            "field": "name",
+            "type": "nominal"
+        }
+    }
+
+}
