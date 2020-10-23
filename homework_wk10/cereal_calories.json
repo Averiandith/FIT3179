@@ -1,19 +1,59 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {
-        "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/cereal.csv"
-    },
-
-    "mark": "bar",
-    "encoding": {
-        "x": {
-            "field": "calories",
-            "type": "quantitative"
-        },
-        "y": {
-            "field": "name",
-            "type": "nominal"
+    "description": "Bar chart to showcase calories of each cereal products.",
+    "data": {"url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/homework_wk10/small_cereal.csv"},
+    "params": [
+        {
+            "name": "Cereal_Selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Bran Flakes",
+                    "Cap'n'Crunch",
+                    "Cheerios",
+                    "Corn Flakes",
+                    "Crispix",
+                    "Frosted Flakes",
+                    "Fruity Pebbles",
+                    "Quaker Oatmeal"
+                ],
+                "labels": [
+                    "Show All",
+                    "Bran Flakes",
+                    "Cap'n'Crunch",
+                    "Cheerios",
+                    "Corn Flakes",
+                    "Crispix",
+                    "Frosted Flakes",
+                    "Fruity Pebbles",
+                    "Quaker Oatmeal"
+                ],
+                "name": "Cereal Selection: "
+            }
         }
-    }
-
-}
+    ],
+    "transform": [
+        {"filter": "Cereal_Selection == null || Cereal_Selection == datum.name"}
+    ],
+    "encoding": {
+      "y": {"field": "name", "type": "nominal", "title": "Cereal Name"},
+      "x": {"field": "calories", "type": "quantitative", "scale": {"padding": 10}, "title": "Calorie (kcal)"},
+      "text": {"field": "calories", "type": "quantitative"},
+      "color": {"value": "pink"},
+      "tooltip": [
+          {"field": "name", "type": "nominal", "title": "Cereal Name"},
+          {"field": "calories", "type": "quantitative", "title": "Calorie (kcal)"}
+      ]
+    },
+    "layer": [{
+      "mark": "bar"
+    }, {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 3
+      }
+    }]
+  }

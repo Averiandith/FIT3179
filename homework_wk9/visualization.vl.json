@@ -14,7 +14,7 @@
     },
     {
       "data": {
-        "url": "https://github.com/Averiandith/FIT3179/blob/main/2018.csv"
+        "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/homework_wk9/small_2018.csv"
       },
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
