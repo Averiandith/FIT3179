@@ -3,13 +3,13 @@ Repository for FIT3179 Data Visualisation
 
 <h3>Content</h3>  
 
-1. Homework Folders:    
+<h4>Homework Folders:</h4>
 * homework_wk8  
 * homework_wk9  
 * homework_wk10  
 
-1. Assignment Folder:  
+<h4>Assignment Folder:</h4>  
 * assignment_playground  
 
-1. HTML for GitHub Pages:  
+<h4>HTML for GitHub Pages:</h4>    
 * index.html
