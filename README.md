@@ -1,7 +1,7 @@
 # FIT3179
 Repository for FIT3179 Data Visualisation
 
-<h3>Content</h3>  
+<h2>Content</h2>  
 
 <h4>Homework Folders:</h4>  
 
