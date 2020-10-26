@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "repeat": {
+      "row": ["Freedom To Make Life Choices", "Score", "Perceptions Of Corruption"],
+      "column": ["Perceptions Of Corruption", "Score", "Freedom To Make Life Choices"]
+    },
+    "spec": {
+      "data": {"url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019_adv_factors.csv"},
+      "mark": "point",
+      "selection": {
+        "brush": {
+          "type": "interval",
+          "resolve": "union",
+          "on": "[mousedown[event.shiftKey], window:mouseup] > window:mousemove!",
+          "translate": "[mousedown[event.shiftKey], window:mouseup] > window:mousemove!",
+          "zoom": "wheel![event.shiftKey]"
+        },
+        "grid": {
+          "type": "interval",
+          "resolve": "global",
+          "bind": "scales",
+          "translate": "[mousedown[!event.shiftKey], window:mouseup] > window:mousemove!",
+          "zoom": "wheel![!event.shiftKey]"
+        }
+      },
+      "encoding": {
+        "x": {"field": {"repeat": "column"}, "type": "quantitative"},
+        "y": {
+          "field": {"repeat": "row"},
+          "type": "quantitative",
+          "axis": {"minExtent": 50}
+        },
+        "color": {
+          "condition": {
+            "selection": "brush",
+            "field": "Origin",
+            "type": "nominal"
+          },
+          "value": "grey"
+        }
+      }
+    }
+  }
+  

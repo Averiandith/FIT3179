@@ -13,10 +13,10 @@
       "lookup": "properties.NAME",
       "from": {
         "data" : {
-          "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019_factors.csv"
+          "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019_adv_factors.csv"
         },
         "key": "Country",
-        "fields": ["Major_Factor_GDP_Support"]
+        "fields": ["Major Factor"]
       }
     }],
     "projection": {
@@ -25,13 +25,13 @@
     "mark": "geoshape",
     "encoding": {
       "color": {
-        "field": "Major_Factor_GDP_Support",
+        "field": "Major Factor",
         "type": "nominal",
         "scale": {"scheme": "accent"}
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-        {"field": "Major_Factor_GDP_Support", "type": "nominal"}
+        {"field": "Major Factor", "type": "nominal"}
       ]
     }
   }
