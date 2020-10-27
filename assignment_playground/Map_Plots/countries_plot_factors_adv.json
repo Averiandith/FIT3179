@@ -29,7 +29,7 @@
       "field": "Major Factor",
       "type": "nominal",
       "scale": {"scheme": "accent"},
-      "legend": {"orient": "bottom", "direction": "horizontal"}
+      "legend": {"orient": "bottom-right", "direction": "horizontal"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},

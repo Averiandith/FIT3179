@@ -1,0 +1,113 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width":300,
+    "height": 400,
+    "background": "#fddde6",
+    "data": {"url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019.csv"},
+    "title": "Economy vs Freedom",
+    "layer": [
+      {
+        "mark": {
+          "type": "point",
+          "filled": true
+        },
+        "encoding": {
+          "x": {
+            "field": "GDP_Per_Capita",
+            "type": "quantitative",
+            "title": "Economy"
+          },
+          "y": {
+            "field": "Freedom_To_Make_Life_Choices",
+            "type": "quantitative",
+            "title": "Freedom"
+          },
+          "color": {"field": "Region", "type": "nominal", "scale": {"scheme": "category10"}},
+          "shape": {"field": "Region", "type": "nominal"}
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "firebrick"
+        },
+        "transform": [
+          {
+            "regression": "GDP_Per_Capita",
+            "on": "Freedom_To_Make_Life_Choices"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "GDP_Per_Capita",
+            "type": "quantitative",
+            "title": "Economy"
+          },
+          "y": {
+            "field": "Freedom_To_Make_Life_Choices",
+            "type": "quantitative",
+            "title": "Health"
+          }
+        }
+      }
+    ],
+    "params": [
+        {
+            "name": "Region_Selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Africa",
+                    "Arab States",
+                    "Asia & Pacific",
+                    "Europe",
+                    "Middle East",
+                    "North America",
+                    "South/Latin America"
+                ],
+                "labels": [
+                    "Show All",
+                    "Africa",
+                    "Arab States",
+                    "Asia & Pacific",
+                    "Europe",
+                    "Middle East",
+                    "North America",
+                    "South/Latin America"
+                ],
+                "name": "Region Selection: "
+            }
+        },
+        {
+          "name": "Rank_Selection",
+          "value": 50,
+          "bind": {
+            "input": "range",
+            "min": 1,
+            "max": 156,
+            "step": 1,
+            "name": "Rank Slider (Inclusive): "
+          }
+        }
+    ],
+    "transform": [
+        {"filter": "Region_Selection == null || Region_Selection == datum.Region"},
+        {"filter": "datum.Overall_Rank <= Rank_Selection"}
+    ],
+    "encoding": {
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "Region", "type": "nominal", "title": "Region"},
+        {"field": "Overall_Rank", "type": "quantitative", "title": "Rank"},
+        {"field": "Score", "type": "quantitative", "title": "Score"},
+        {"field": "GDP_Per_Capita", "type": "quantitative", "title": "GDP Per Capita"},
+        {"field": "Social_Support", "type": "quantitative", "title": "Social Support"},
+        {"field": "Healthy_Life_Expectancy", "type": "quantitative", "title": "Healthy Life Expectancy"},
+        {"field": "Freedom_To_Make_Life_Choices", "type": "quantitative", "title": "Freedom To Make Life Choices"},
+        {"field": "Generosity", "type": "quantitative", "title": "Generosity"},
+        {"field": "Perceptions_Of_Corruption", "type": "quantitative", "title": "Perceptions Of Corruption"}
+      ]
+  } 
+  }
+  
