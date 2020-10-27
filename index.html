@@ -68,7 +68,13 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-1-1">
+        <div class="pure-u-1-5">
+            <div class="description description-left">
+              <h2>Major factors that contribute to hapiness</h2>
+              <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            </div>
+          </div>
+        <div class="pure-u-2-3">
           <div id="vis1" class="vis-container"></div>
         </div>
     </div>
@@ -85,9 +91,9 @@
    
 <script type="text/javascript">
   var specVis1 = "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Map_Plots/countries_plot_factors_adv.json";
-  var specVis2 = "https://github.com/Averiandith/FIT3179/blob/main/assignment_playground/Scatter_Plots/scatter_plot_matrix.json";
-  var specVis3 = "https://github.com/Averiandith/FIT3179/blob/main/assignment_playground/Scatter_Plots/economy_health_scatter_regression.json";
-  var specVis4 = "https://github.com/Averiandith/FIT3179/blob/main/assignment_playground/Map_Plots/countries_plot_score.json";
+  var specVis2 = "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Scatter_Plots/scatter_plot_matrix.json";
+  var specVis3 = "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Scatter_Plots/economy_health_scatter_regression.json";
+  var specVis4 = "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Map_Plots/countries_plot_score.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": true}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
