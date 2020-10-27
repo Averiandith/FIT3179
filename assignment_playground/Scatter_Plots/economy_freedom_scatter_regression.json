@@ -22,7 +22,12 @@
             "type": "quantitative",
             "title": "Freedom"
           },
-          "color": {"field": "Region", "type": "nominal", "scale": {"scheme": "category10"}},
+          "color": {
+            "field": "Region", 
+            "type": "nominal", 
+            "scale": {"scheme": "category10"},
+            "legend": null
+          },
           "shape": {"field": "Region", "type": "nominal"}
         }
       },
@@ -46,7 +51,7 @@
           "y": {
             "field": "Freedom_To_Make_Life_Choices",
             "type": "quantitative",
-            "title": "Health"
+            "title": "Freedom"
           }
         }
       }
