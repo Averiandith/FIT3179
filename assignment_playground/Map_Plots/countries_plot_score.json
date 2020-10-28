@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 750,
+  "width": 800,
   "height": 500,
   "background": "#fddde6",
   "data": {
@@ -28,7 +28,8 @@
     "color": {
       "field": "Score",
       "type": "quantitative",
-      "scale": {"scheme": "viridis"}
+      "scale": {"scheme": "viridis"},
+      "legend": {"orient": "bottom-right", "direction": "horizontal"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
