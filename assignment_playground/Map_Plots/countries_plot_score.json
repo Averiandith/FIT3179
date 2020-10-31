@@ -14,7 +14,7 @@
     "lookup": "properties.NAME",
     "from": {
       "data" : {
-        "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019_factors.csv"
+        "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019.csv"
       },
       "key": "Country",
       "fields": ["Score"]

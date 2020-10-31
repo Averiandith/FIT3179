@@ -13,16 +13,20 @@
       },
       "encoding": {
         "x": {
-          "field": "GDP_Per_Capita",
+          "field": "Economy GDP",
           "type": "quantitative",
           "title": "Economy"
         },
         "y": {
-          "field": "Healthy_Life_Expectancy",
+          "field": "Life Expectancy",
           "type": "quantitative",
           "title": "Health"
         },
-        "color": {"field": "Region", "type": "nominal", "scale": {"scheme": "category10"}},
+        "color": {
+          "field": "Region", 
+          "type": "nominal", 
+          "scale": {"scheme": "category10"}
+        },
         "shape": {"field": "Region", "type": "nominal"}
       }
     },
@@ -33,18 +37,18 @@
       },
       "transform": [
         {
-          "regression": "GDP_Per_Capita",
+          "regression": "Economy GDP",
           "on": "Healthy_Life_Expectancy"
         }
       ],
       "encoding": {
         "x": {
-          "field": "GDP_Per_Capita",
+          "field": "Economy GDP",
           "type": "quantitative",
           "title": "Economy"
         },
         "y": {
-          "field": "Healthy_Life_Expectancy",
+          "field": "Life Expectancy",
           "type": "quantitative",
           "title": "Health"
         }
@@ -93,20 +97,20 @@
   ],
   "transform": [
       {"filter": "Region_Selection == null || Region_Selection == datum.Region"},
-      {"filter": "datum.Overall_Rank <= Rank_Selection"}
+      {"filter": "datum.Rank <= Rank_Selection"}
   ],
   "encoding": {
     "tooltip": [
       {"field": "Country", "type": "nominal", "title": "Country"},
       {"field": "Region", "type": "nominal", "title": "Region"},
-      {"field": "Overall_Rank", "type": "quantitative", "title": "Rank"},
+      {"field": "Rank", "type": "quantitative", "title": "Rank"},
       {"field": "Score", "type": "quantitative", "title": "Score"},
-      {"field": "GDP_Per_Capita", "type": "quantitative", "title": "GDP Per Capita"},
-      {"field": "Social_Support", "type": "quantitative", "title": "Social Support"},
-      {"field": "Healthy_Life_Expectancy", "type": "quantitative", "title": "Healthy Life Expectancy"},
-      {"field": "Freedom_To_Make_Life_Choices", "type": "quantitative", "title": "Freedom To Make Life Choices"},
+      {"field": "Economy GDP", "type": "quantitative", "title": "Economy"},
+      {"field": "Social Support", "type": "quantitative", "title": "Social Support"},
+      {"field": "Life_Expectancy", "type": "quantitative", "title": "Health"},
+      {"field": "Freedom", "type": "quantitative", "title": "Freedom"},
       {"field": "Generosity", "type": "quantitative", "title": "Generosity"},
-      {"field": "Perceptions_Of_Corruption", "type": "quantitative", "title": "Perceptions Of Corruption"}
+      {"field": "Trust In Government", "type": "quantitative", "title": "Trust In Government"}
     ]
-} 
+  } 
 }
