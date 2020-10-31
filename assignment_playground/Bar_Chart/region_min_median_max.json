@@ -49,7 +49,7 @@
     "color": {
       "field": "Group",
       "scale": {"range": ["#1F9E89", "#FDE725", "#440154"]},
-      "legend": {"direction": "horizontal", "orient": "bottom-right"}
+      "legend": {"direction": "horizontal", "orient": "bottom"}
     },
     "tooltip": [
       {"field": "Country", "type": "nominal", "title": "Country/Type"},
