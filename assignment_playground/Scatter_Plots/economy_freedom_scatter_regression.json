@@ -107,11 +107,8 @@
       {"field": "Rank", "type": "quantitative", "title": "Rank"},
       {"field": "Score", "type": "quantitative", "title": "Score"},
       {"field": "Economy GDP", "type": "quantitative", "title": "Economy"},
-      {"field": "Social Support", "type": "quantitative", "title": "Social Support"},
-      {"field": "Life_Expectancy", "type": "quantitative", "title": "Health"},
-      {"field": "Freedom", "type": "quantitative", "title": "Freedom"},
-      {"field": "Generosity", "type": "quantitative", "title": "Generosity"},
-      {"field": "Trust In Government", "type": "quantitative", "title": "Trust In Government"}
+      {"field": "Life Expectancy", "type": "quantitative", "title": "Health"},
+      {"field": "Freedom", "type": "quantitative", "title": "Freedom"}
     ]
   } 
 }
