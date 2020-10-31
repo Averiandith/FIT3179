@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "height": 300,
-  "background": "#fddde6",
+  "background": "#ffe4e1",
   "data": {
     "values": [
       {"Region": "Europe", "Country": "Finland", "Score": 7.769, "Type": 1},
@@ -35,7 +35,7 @@
   "width": {"step": 20},
   "encoding": {
     "column": {
-      "field": "Region", "type": "nominal", "spacing": 50
+      "field": "Region", "type": "nominal", "spacing": 45
     },
     "y": {
       "field": "Score",
