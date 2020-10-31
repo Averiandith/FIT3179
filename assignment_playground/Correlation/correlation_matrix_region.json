@@ -1,0 +1,85 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": 300,
+    "height": 300,
+    "background": "#fddde6",
+    "data": {
+      "values": [
+        {"Region": "Europe", "Type": "Economy GDP", "Avg": 1.207},
+        {"Region": "Europe", "Type": "Social Support", "Avg": 1.398},
+        {"Region": "Europe", "Type": "Health", "Avg": 0.919},
+        {"Region": "Europe", "Type": "Freedom", "Avg": 0.398},
+        {"Region": "Europe", "Type": "Generosity", "Avg": 0.17},
+        {"Region": "Europe", "Type": "Trust In Government", "Avg": 0.127},
+        {"Region": "Asia & Pacific", "Type": "Economy GDP", "Avg": 0.936},
+        {"Region": "Asia & Pacific", "Type": "Social Support", "Avg": 1.25},
+        {"Region": "Asia & Pacific", "Type": "Health", "Avg": 0.772},
+        {"Region": "Asia & Pacific", "Type": "Freedom", "Avg": 0.472},
+        {"Region": "Asia & Pacific", "Type": "Generosity", "Avg": 0.245},
+        {"Region": "Asia & Pacific", "Type": "Trust In Government", "Avg": 0.129},
+        {"Region": "North America", "Type": "Economy GDP", "Avg": 1.399},
+        {"Region": "North America", "Type": "Social Support", "Avg": 1.481},
+        {"Region": "North America", "Type": "Health", "Avg": 0.957},
+        {"Region": "North America", "Type": "Freedom", "Avg": 0.519},
+        {"Region": "North America", "Type": "Generosity", "Avg": 0.283},
+        {"Region": "North America", "Type": "Trust In Government", "Avg": 0.218},
+        {"Region": "South/Latin America", "Type": "Economy GDP", "Avg": 0.924},
+        {"Region": "South/Latin America", "Type": "Social Support", "Avg": 1.339},
+        {"Region": "South/Latin America", "Type": "Health", "Avg": 0.812},
+        {"Region": "South/Latin America", "Type": "Freedom", "Avg": 0.441},
+        {"Region": "South/Latin America", "Type": "Generosity", "Avg": 0.145},
+        {"Region": "South/Latin America", "Type": "Trust In Government", "Avg": 0.072},
+        {"Region": "Arab States", "Type": "Economy GDP", "Avg": 0.698},
+        {"Region": "Arab States", "Type": "Social Support", "Avg": 1.022},
+        {"Region": "Arab States", "Type": "Health", "Avg": 0.648},
+        {"Region": "Arab States", "Type": "Freedom", "Avg": 0.275},
+        {"Region": "Arab States", "Type": "Generosity", "Avg": 0.144},
+        {"Region": "Arab States", "Type": "Trust In Government", "Avg": 0.107},
+        {"Region": "Africa", "Type": "Economy GDP", "Avg": 0.457},
+        {"Region": "Africa", "Type": "Social Support", "Avg": 0.92},
+        {"Region": "Africa", "Type": "Health", "Avg": 0.406},
+        {"Region": "Africa", "Type": "Freedom", "Avg": 0.344},
+        {"Region": "Africa", "Type": "Generosity", "Avg": 0.186},
+        {"Region": "Africa", "Type": "Trust In Government", "Avg": 0.09},
+        {"Region": "Middle East", "Type": "Economy GDP", "Avg": 1.077},
+        {"Region": "Middle East", "Type": "Social Support", "Avg": 1.121},
+        {"Region": "Middle East", "Type": "Health", "Avg": 0.709},
+        {"Region": "Middle East", "Type": "Freedom", "Avg": 0.337},
+        {"Region": "Middle East", "Type": "Generosity", "Avg": 0.171},
+        {"Region": "Middle East", "Type": "Trust In Government", "Avg": 0.116}
+      ]
+    },
+  
+    "encoding": {
+      "x": {"field": "Region", "type": "nominal"},
+      "y": {"field": "Type", "type": "nominal"}
+    },
+    "layer": [
+      {
+        "mark": "rect",
+        "encoding": {
+          "color": {
+            "field": "Avg",
+            "type": "quantitative",
+            "scale": {"scheme": "viridis"}
+          }
+        }
+      },
+      {
+        "mark": "text",
+        "encoding": {
+          "text": {"field": "Avg", "type": "quantitative"},
+          "color": {
+            "condition": {"test": "datum['Avg'] < 1.1", "value": "white"}
+          }
+        }
+      }
+    ],
+    "config": {
+      "axis": {
+        "grid": true, 
+        "tickBand": "extent"
+      }
+    }
+  }
+  

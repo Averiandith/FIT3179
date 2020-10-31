@@ -1,15 +1,22 @@
-﻿Region,Country,Score
+﻿Region,Country / Type,Score
 Europe,Finland,7.769
+Europe,Average,6.181
 Europe,Ukraine,4.332
 Asia & Pacific,New Zealand,7.307
+Asia & Pacific,Average,5.366
 Asia & Pacific,Afghanistan,3.203
 North America,Canada,7.278
+North America,Average,7.085
 North America,United States of America,6.892
 South/Latin America,Costa Rica,7.167
+South/Latin America,Average,5.954
 South/Latin America,Haiti,3.597
 Middle East,United Arab Emirates,6.825
+Middle East,Average,5.101
 Middle East,Yemen,3.38
 Arab States,Bahrain,6.199
+Arab States,Average,4.863
 Arab States,Comoros,3.973
 Africa,Mauritius,5.888
+Africa,Average,4.294
 Africa,S. Sudan,2.853

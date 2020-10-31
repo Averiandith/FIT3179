@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "height": 300,
+  "background": "#fddde6",
+  "data": {
+    "values": [
+      {"Region": "Europe", "Country": "Finland", "Score": 7.769, "Type": 1},
+      {"Region": "Europe", "Country": "Ukraine", "Score": 4.332, "Type": 2},
+      {"Region": "Europe", "Country": "Average", "Score": 6.181, "Type": 3},
+      {"Region": "Asia & Pacific", "Country": "New Zealand", "Score": 7.307, "Type": 1},
+      {"Region": "Asia & Pacific", "Country": "Afghanistan", "Score": 3.203, "Type": 2},
+      {"Region": "Asia & Pacific", "Country": "Average", "Score": 5.366, "Type": 3},
+      {"Region": "North America", "Country": "Canada", "Score": 7.278, "Type": 1},
+      {"Region": "North America", "Country": "United States of America", "Score": 6.892, "Type": 2},
+      {"Region": "North America", "Country": "Average", "Score": 7.085, "Type": 3},
+      {"Region": "South/Latin America", "Country": "Costa Rica", "Score": 7.16, "Type": 1},
+      {"Region": "South/Latin America", "Country": "Haiti", "Score": 3.597, "Type": 2},
+      {"Region": "South/Latin America", "Country": "Average", "Score": 5.954, "Type": 3},
+      {"Region": "Middle East", "Country": "United Arab Emirates", "Score": 6.825, "Type": 1},
+      {"Region": "Middle East", "Country": "Yemen", "Score": 3.38, "Type": 2},
+      {"Region": "Middle East", "Country": "Average", "Score": 5.101, "Type": 3},
+      {"Region": "Arab States", "Country": "Bahrain", "Score": 6.199, "Type": 1},
+      {"Region": "Arab States", "Country": "Comoros", "Score": 3.973, "Type": 2},
+      {"Region": "Arab States", "Country": "Average", "Score": 4.863, "Type": 3},
+      {"Region": "Africa", "Country": "Mauritius", "Score": 5.888, "Type": 1},
+      {"Region": "Africa", "Country": "S. Sudan", "Score": 2.85, "Type": 2},
+      {"Region": "Africa", "Country": "Average", "Score": 4.294, "Type": 3}
+    ]
+  },
+  "transform": [
+    {"calculate": "datum.Type == 1 ? 'High' : (datum.Type == 2 ? 'Low' : 'Average')", "as": "Group"}
+  ],
+  
+  "mark": {"type": "bar"},
+  "width": {"step": 20},
+  "encoding": {
+    "column": {
+      "field": "Region", "type": "nominal", "spacing": 50
+    },
+    "y": {
+      "field": "Score",
+      "type": "quantitative",
+      "axis": {"grid": false, "title": "Score"}
+    },
+    "x": {
+      "field": "Group",
+      "axis": {"grid": false, "title": ""}
+    },
+    "color": {
+      "field": "Group",
+      "scale": {"range": ["#1F9E89", "#FDE725", "#440154"]}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country/Type"},
+      {"field": "Score", "type": "quantitative"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"domainWidth": 1}
+  }
+}
+
+
+
+
