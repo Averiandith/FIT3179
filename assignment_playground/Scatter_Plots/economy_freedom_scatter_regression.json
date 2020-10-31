@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width":320,
+  "width":310,
   "height": 400,
   "background": "#ffe4e1",
   "data": {"url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019.csv"},
