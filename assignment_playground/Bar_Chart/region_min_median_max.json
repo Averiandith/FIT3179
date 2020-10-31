@@ -32,10 +32,10 @@
   ],
   
   "mark": {"type": "bar"},
-  "width": {"step": 20},
+  "width": {"step": 15},
   "encoding": {
     "column": {
-      "field": "Region", "type": "nominal", "spacing": 45
+      "field": "Region", "type": "nominal", "spacing": 40
     },
     "y": {
       "field": "Score",
