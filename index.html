@@ -46,6 +46,9 @@
     .pure-g{
       margin-bottom: 60px;
     }
+    .pure-g2{
+      margin-bottom: 20px;
+    }
     .small-font{
         font-size: 14px;
     }
@@ -59,8 +62,19 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h1>What Makes Us Happy?</h1>
-        <p>Which region or countries are the happiest? What are that factors that contribute to a higher happiness score?
-            These are the questions we aim to explore in this visualisation!
+        <p>
+          Which region or countries are the happiest? What are that factors that contribute to a higher happiness score?
+          What is the average happiness and factor scores for each region?
+          Will a strong economy brings us great health and freedom?
+          These are the questions we aim to explore in this visualisation!
+        </p>
+        <p>
+          The data came from the World Happiness Report. It is a survey aimed to find out the state of global happiness in the year of 2019.
+          The happiness scores are determined by a Cantril ladder. 
+          It allows participants to think of a ladder with the best possible life with score 10, and worst possible life with a score of 0. 
+          Then, participants are to rate their own current lives on that ladder scale. 
+          The happiness score contributes to the country ranking among 155 countries.
+
         </p>
       </div>
     </div>
@@ -86,7 +100,7 @@
     <!-- end pure grid group -->  
 
     <!-- pure grid group -->
-    <div class="pure-g">
+    <div class="pure-g2">
       <div class="pure-u-1-2">
           <div id="vis4" class="vis-container"></div>
       </div>
@@ -117,6 +131,11 @@
       <div class="pure-u-1-2">
         <div class="description description-left">
           <h2>Average happiness score for each region</h2>
+          <p>
+            <i>
+              Notice the relationship between the two heatmaps, where a higher factor score might contribute a higher happiness score of the region.
+            </i>
+          </p>
         </div>
       </div>
     </div>
@@ -127,6 +146,9 @@
         <div class="pure-u-1-4">
           <div class="description description-left">
             <h2>Does having a strong economy means better health and freedom?</h2>
+            <p>
+
+            </p>
             <p>
               <i>
                 Hover across the points to check out their factor and happiness scores.
@@ -155,11 +177,14 @@
         <div class="description description-right">
           <h2>Region best and worst scored country</h2>
           <p>
-            This group bar chart aims to present the happiest and least happiest countries in each region.
+            This grouped bar chart aims to present the happiest and least happiest countries in each region.
             The average score is also shown to showcase on whether there is a huge discreptancy between the highest and lowest score between the two countries.
           </p>
           <p>
-            <i>It seems that Asia & Pacific and South/Latin America region has the biggest difference in the happiest and least happiest score, 4.1 and 3.6 respectively</i>
+            <i>
+              Hover across the bar charts to check out the happiness score for the country with the difference between the highest score and lowest score country in the region.
+              It seems that Asia & Pacific and South/Latin America region has the biggest difference in the happiest and least happiest score, 4.1 and 3.6 respectively.
+            </i>
           </p>
         </div>
       </div>
