@@ -1,0 +1,50 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": 400,
+    "height": 60,
+    "background": "#ffe4e1",
+    "data": {
+      "values": [
+        {"Region": "Europe", "Type": "Score", "Avg": 6.181},
+        {"Region": "Asia & Pacific", "Type": "Score", "Avg": 5.366},
+        {"Region": "North America", "Type": "Score", "Avg": 7.085},
+        {"Region": "South/Latin America", "Type": "Score", "Avg": 5.954},
+        {"Region": "Arab States", "Type": "Score", "Avg": 4.663},
+        {"Region": "Africa", "Type": "Score", "Avg": 4.294},
+        {"Region": "Middle East", "Type": "Score", "Avg": 5.101}
+      ]
+    },
+  
+    "encoding": {
+      "x": {"field": "Region", "type": "nominal"},
+      "y": {"field": "Type", "type": "nominal", "title": "Happiness"}
+    },
+    "layer": [
+      {
+        "mark": "rect",
+        "encoding": {
+          "color": {
+            "field": "Avg",
+            "type": "quantitative",
+            "scale": {"scheme": "viridis"}
+          }
+        }
+      },
+      {
+        "mark": "text",
+        "encoding": {
+          "text": {"field": "Avg", "type": "quantitative"},
+          "color": {
+            "condition": {"test": "datum['Avg'] < 6.0", "value": "white"}
+          }
+        }
+      }
+    ],
+    "config": {
+      "axis": {
+        "grid": true, 
+        "tickBand": "extent"
+      }
+    }
+  }
+  

@@ -17,7 +17,7 @@
         "url": "https://raw.githubusercontent.com/Averiandith/FIT3179/main/assignment_playground/Dataset/2019.csv"
       },
       "key": "Country",
-      "fields": ["Score"]
+      "fields": ["Score", "Region", "Rank"]
     }
   }],
   "projection": {
@@ -33,6 +33,8 @@
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Region", "type": "nominal"},
+      {"field": "Rank", "type": "nominal"},
       {"field": "Score", "type": "quantitative"}
     ]
   }

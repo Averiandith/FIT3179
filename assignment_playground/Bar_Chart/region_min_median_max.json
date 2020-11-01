@@ -4,27 +4,27 @@
   "background": "#ffe4e1",
   "data": {
     "values": [
-      {"Region": "Europe", "Country": "Finland", "Score": 7.769, "Type": 1},
-      {"Region": "Europe", "Country": "Ukraine", "Score": 4.332, "Type": 2},
-      {"Region": "Europe", "Country": "Average", "Score": 6.181, "Type": 3},
-      {"Region": "Asia & Pacific", "Country": "New Zealand", "Score": 7.307, "Type": 1},
-      {"Region": "Asia & Pacific", "Country": "Afghanistan", "Score": 3.203, "Type": 2},
-      {"Region": "Asia & Pacific", "Country": "Average", "Score": 5.366, "Type": 3},
-      {"Region": "North America", "Country": "Canada", "Score": 7.278, "Type": 1},
-      {"Region": "North America", "Country": "United States of America", "Score": 6.892, "Type": 2},
-      {"Region": "North America", "Country": "Average", "Score": 7.085, "Type": 3},
-      {"Region": "South/Latin America", "Country": "Costa Rica", "Score": 7.16, "Type": 1},
-      {"Region": "South/Latin America", "Country": "Haiti", "Score": 3.597, "Type": 2},
-      {"Region": "South/Latin America", "Country": "Average", "Score": 5.954, "Type": 3},
-      {"Region": "Middle East", "Country": "United Arab Emirates", "Score": 6.825, "Type": 1},
-      {"Region": "Middle East", "Country": "Yemen", "Score": 3.38, "Type": 2},
-      {"Region": "Middle East", "Country": "Average", "Score": 5.101, "Type": 3},
-      {"Region": "Arab States", "Country": "Bahrain", "Score": 6.199, "Type": 1},
-      {"Region": "Arab States", "Country": "Comoros", "Score": 3.973, "Type": 2},
-      {"Region": "Arab States", "Country": "Average", "Score": 4.863, "Type": 3},
-      {"Region": "Africa", "Country": "Mauritius", "Score": 5.888, "Type": 1},
-      {"Region": "Africa", "Country": "S. Sudan", "Score": 2.85, "Type": 2},
-      {"Region": "Africa", "Country": "Average", "Score": 4.294, "Type": 3}
+      {"Region": "Europe", "Country": "Finland", "Score": 7.769, "Type": 1, "Diff": 3.437},
+      {"Region": "Europe", "Country": "Ukraine", "Score": 4.332, "Type": 2, "Diff": 3.437},
+      {"Region": "Europe", "Country": "Average", "Score": 6.181, "Type": 3, "Diff": 3.437},
+      {"Region": "Asia & Pacific", "Country": "New Zealand", "Score": 7.307, "Type": 1, "Diff": 4.104},
+      {"Region": "Asia & Pacific", "Country": "Afghanistan", "Score": 3.203, "Type": 2, "Diff": 4.104},
+      {"Region": "Asia & Pacific", "Country": "Average", "Score": 5.366, "Type": 3, "Diff": 4.104},
+      {"Region": "North America", "Country": "Canada", "Score": 7.278, "Type": 1, "Diff": 0.386},
+      {"Region": "North America", "Country": "United States of America", "Score": 6.892, "Type": 2, "Diff": 0.386},
+      {"Region": "North America", "Country": "Average", "Score": 7.085, "Type": 3, "Diff": 0.386},
+      {"Region": "South/Latin America", "Country": "Costa Rica", "Score": 7.16, "Type": 1, "Diff": 3.563},
+      {"Region": "South/Latin America", "Country": "Haiti", "Score": 3.597, "Type": 2, "Diff": 3.563},
+      {"Region": "South/Latin America", "Country": "Average", "Score": 5.954, "Type": 3, "Diff": 3.563},
+      {"Region": "Middle East", "Country": "United Arab Emirates", "Score": 6.825, "Type": 1, "Diff": 3.445},
+      {"Region": "Middle East", "Country": "Yemen", "Score": 3.38, "Type": 2, "Diff": 3.445},
+      {"Region": "Middle East", "Country": "Average", "Score": 5.101, "Type": 3, "Diff": 3.445},
+      {"Region": "Arab States", "Country": "Bahrain", "Score": 6.199, "Type": 1, "Diff": 2.226},
+      {"Region": "Arab States", "Country": "Comoros", "Score": 3.973, "Type": 2, "Diff": 2.226},
+      {"Region": "Arab States", "Country": "Average", "Score": 4.863, "Type": 3, "Diff": 2.226},
+      {"Region": "Africa", "Country": "Mauritius", "Score": 5.888, "Type": 1, "Diff": 3.038},
+      {"Region": "Africa", "Country": "S. Sudan", "Score": 2.85, "Type": 2, "Diff": 3.038},
+      {"Region": "Africa", "Country": "Average", "Score": 4.294, "Type": 3, "Diff": 3.038}
     ]
   },
   "transform": [
@@ -53,7 +53,8 @@
     },
     "tooltip": [
       {"field": "Country", "type": "nominal", "title": "Country/Type"},
-      {"field": "Score", "type": "quantitative"}
+      {"field": "Score", "type": "quantitative"},
+      {"field": "Diff", "type": "quantitative", "title": "Difference Score"}
     ]
   },
   "config": {
